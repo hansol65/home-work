@@ -33,7 +33,13 @@ br을 활용해서 줄바꿈 가능 (수업에서도 했었음)
 코드 작성시 \``` 기호로 감싸고 뒤에 언어 이름을 넣으면 하이라이트까지 표현이 된다
 
 ```c
-printf("hello World")
+printf("Hello World!");
+```
+
+<br>
+
+```js
+consol.log("Hello World!");
 ```
 
 # 6. 표 삽입
