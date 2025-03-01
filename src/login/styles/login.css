@@ -1,0 +1,150 @@
+:root {
+  --default-Size: 1rem;
+  --default-color: #121212;
+  --naver-color: #03cf5d;
+  --focus-color: #e9f0fd;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  img {
+    width: 230px;
+  }
+}
+/* 공통 스타일 */
+form {
+  width: 100%;
+  max-width: 500px; /* 최대 너비 설정 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
+
+/* 아이디, 비밀번호 입력 필드 */
+.email input,
+.pwd input,
+.loginBtn input {
+  width: 100%;
+  height: 45px; /* 동일한 높이 설정 */
+
+  border: 1px solid #ccc; /* 입력 필드와 버튼 동일한 border 적용 */
+  font-size: var(--default-Size);
+  color: var(--default-color);
+}
+.email input:focus,
+.pwd input:focus {
+  border: 1px solid var(--naver-color);
+  background: var(--focus-color);
+  outline: none;
+}
+
+/* 로그인 버튼 */
+.loginBtn input {
+  background-color: var(--naver-color);
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid var(--naver-color);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* 로그인 버튼 호버 효과 */
+.loginBtn input:hover {
+  background-color: #028a3d;
+}
+
+/* 로그인 유지, 보안 */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px; /* 위쪽 여백 10px */
+  font-size: var(--default-Size);
+}
+/* 로그인 유지, 보안 영역 */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* 로그인 폼과 동일한 최대 너비 */
+  margin: 5px auto 0; /* 로그인 폼과 동일한 위치 유지 */
+  font-size: var(--default-Size);
+}
+
+/* 로그인 상태 유지 */
+.loginStatus {
+  display: flex;
+  align-items: center;
+}
+
+/* 체크박스 숨기기 */
+.loginStatus input {
+  display: none;
+}
+
+.statusTxt {
+  display: flex;
+  align-items: center;
+  font-size: var(--default-Size);
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+
+/* 체크박스 스타일 */
+.statusTxt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("/src/login/svg/uncheckedbox.svg");
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.loginStatus input:checked + .statusTxt::before {
+  background-image: url("/src/login/svg/checkedbox.svg");
+}
+
+/* IP 보안 */
+.security a {
+  font-size: var(--default-Size);
+  color: var(--default-color);
+  text-decoration: none;
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .options {
+    display: flex;
+    justify-content: flex-end; /* 내부 요소를 오른쪽 정렬 */
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .security {
+    display: none; /* 모바일에서 숨김 */
+  }
+}
+/* 데스크탑 */
+@media (min-width: 768px) {
+  .options {
+    justify-content: space-between; /* 로그인 상태 유지 왼쪽, IP 보안 오른쪽 */
+    flex-direction: row; /* 가로 정렬 유지 */
+    max-width: 500px;
+  }
+}

@@ -1,0 +1,60 @@
+<!-- HTML 마크업을 작성해 주세요 -->
+
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="/src/login/styles/login.css" />
+  </head>
+
+  <body>
+    <!-- 네이버 로고 -->
+    <div class="logo">
+        <a href="/"><img src="svg/naverLogo.svg" alt="네이버 로고" /></a>
+    </div class="logo">
+
+    <form action="/">
+      <!-- 아이디 입력 -->
+      <div class="email">
+        <input type="text" name="userName" id="userName" required placeholder="아이디(이메일)"/>
+      </div>
+      <!-- 비밀번호 입력 -->
+      <div class="pwd">
+        <input type="password"
+         name="userPwd" id="userPwd"
+          required
+           placeholder="비밀번호"/>
+      </div>
+      <!-- 로그인 입력 -->
+      <div class="loginBtn">
+        <input type="submit" value="로그인" />
+      </div>
+    </form>
+
+    <div class="options">
+      <div class="loginStatus">
+          <input type="checkbox" id="remember">
+          <label for="remember" class="statusTxt">로그인 상태 유지</label>
+      </div>
+      
+      <!-- 데스크탑에서만 표시 -->
+      <div class="security">
+          <a href="/src/login/pages/ip_security.html">IP 보안 OFF</a>
+      </div>
+    </div>
+  </body> 
+</html>
