@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>네이버 로그인</title>
     <link
       rel="shortcut icon"
       href="/src/assets/favicon/likelion.ico"
@@ -30,16 +30,16 @@
     <form action="/">
       <!-- 아이디 입력 -->
       <div class="email">
-        <input type="text" name="userName" id="userName" required placeholder="아이디(이메일)"/>
+        <input type="email" name="userName" id="userName" required placeholder="아이디(이메일)"/>
+        <span class="error-message">아이디는 이메일 형식이어야 합니다.</span>
       </div>
       <!-- 비밀번호 입력 -->
       <div class="pwd">
-        <input type="password"
-         name="userPwd" id="userPwd"
-          required
-           placeholder="비밀번호"/>
+        <input type="password" name="userPwd" id="userPwd" required placeholder="비밀번호" minlength="10"
+            title="비밀번호는 10자 이상 입력해야 합니다.">
+        <span class="error-message">비밀번호는 10자 이상 입력해 주세요.</span>
       </div>
-      <!-- 로그인 입력 -->
+      <!-- 로그인 버튼 -->
       <div class="loginBtn">
         <input type="submit" value="로그인" />
       </div>

@@ -48,6 +48,23 @@ form {
   outline: none;
 }
 
+/* 에러 메시지 숨김 */
+.error-message {
+  display: none;
+  font-size: 0.875rem;
+  color: red;
+  margin-top: 5px;
+}
+
+form:invalid input:user-invalid + .error-message {
+  display: block;
+}
+/* 입력값이 유효하면 에러 메시지 숨김 */
+.email input:valid + .error-message,
+.pwd input:valid + .error-message {
+  display: none;
+}
+
 /* 로그인 버튼 */
 .loginBtn input {
   background-color: var(--naver-color);
